@@ -1,12 +1,6 @@
-﻿#region
-
-using System.Windows.Controls;
-
-#endregion
-
-namespace SilverlightApplicationHost.Views
+﻿namespace SilverlightApplicationHost.Views
 {
-    public partial class MainPage : UserControl
+    public partial class MainPage
     {
         public MainPage()
         {

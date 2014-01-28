@@ -8,9 +8,9 @@ using SilverlightApplicationHost.Services;
 
 namespace SilverlightApplicationHost.Providers
 {
-    public class DataServiceProvider
+    public sealed class DataServiceProvider
     {
-        private static readonly IDataService _dataService = new DataService();
+        internal readonly IDataService _dataService = new DataService();
 
         [Export(typeof (IDataService))]
         public IDataService DataService { get { return _dataService; } }

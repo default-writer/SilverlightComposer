@@ -82,7 +82,7 @@ namespace SilverlightApplicationHost.ViewModels
                 return;
             }
 
-            var selectedMefModule = MEFModuleList.ToList().FirstOrDefault(module => module.Value.ToString().Contains(strRevisedSelectedXapName));
+            var selectedMefModule = Modules.ToList().FirstOrDefault(module => module.Value.ToString().Contains(strRevisedSelectedXapName));
             if (selectedMefModule != null)
             {
                 element.Children.Add(selectedMefModule.Value);
@@ -125,7 +125,7 @@ namespace SilverlightApplicationHost.ViewModels
         public ICatalogService CatalogService { get; set; }
 
         [ImportMany(AllowRecomposition = true)]
-        public Lazy<UserControl>[] MEFModuleList { get; set; }
+        public Lazy<UserControl>[] Modules { get; set; }
 
         #endregion
     }

@@ -8,9 +8,9 @@ using SilverlightApplicationHost.Interfaces.Services;
 
 namespace SilverlightApplicationHost.Providers
 {
-    public class EventAggregatorServiceProvider
+    public sealed class EventAggregatorServiceProvider
     {
-        private static readonly IEventAggregator _eventAggregator = new EventAggregator();
+        internal readonly IEventAggregator _eventAggregator = new EventAggregator();
 
         [Export(typeof (IEventAggregatorService))]
         public IEventAggregator EventAggregator { get { return _eventAggregator; } }

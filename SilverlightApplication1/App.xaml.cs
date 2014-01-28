@@ -10,7 +10,7 @@ using SilverlightApplication1.Views;
 
 namespace SilverlightApplication1
 {
-    public partial class App : Application
+    public partial class App
     {
         public App()
         {
@@ -42,11 +42,11 @@ namespace SilverlightApplication1
                 // Для рабочих приложений такую обработку ошибок следует заменить на код, 
                 // оповещающий веб-сайт об ошибке и останавливающий работу приложения.
                 e.Handled = true;
-                Deployment.Current.Dispatcher.BeginInvoke(delegate { ReportErrorToDOM(e); });
+                Deployment.Current.Dispatcher.BeginInvoke(() => ReportError(e));
             }
         }
 
-        private void ReportErrorToDOM(ApplicationUnhandledExceptionEventArgs e)
+        private void ReportError(ApplicationUnhandledExceptionEventArgs e)
         {
             try
             {
@@ -55,7 +55,9 @@ namespace SilverlightApplication1
 
                 HtmlPage.Window.Eval("throw new Error(\"Unhandled Error in Silverlight Application " + errorMsg + "\");");
             }
-            catch (Exception)
+// ReSharper disable EmptyGeneralCatchClause
+            catch
+// ReSharper restore EmptyGeneralCatchClause
             {
             }
         }

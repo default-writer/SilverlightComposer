@@ -9,7 +9,7 @@ namespace SilverlightApplication2.Views
 {
     [PartCreationPolicy(CreationPolicy.NonShared)]
     [Export(typeof (UserControl))]
-    public partial class MainPage : UserControl
+    public partial class MainPage
     {
         public MainPage()
         {
