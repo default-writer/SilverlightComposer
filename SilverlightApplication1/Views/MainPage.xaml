@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="SilverlightApplication1.Views.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:SilverlightApplication1.ViewModels"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <viewModels:MainPageViewModel x:Name="MainPageViewModelDataContext" Panel1Source="SilverlightApplication2.xap" />
+    </UserControl.Resources>
+    <d:DesignProperties.DataContext>
+        <viewModels:MainPageViewModel Panel1Source="SilverlightApplication2.xap" />
+    </d:DesignProperties.DataContext>
+    <Grid x:Name="LayoutRoot" Background="White"
+          DataContext="{Binding Source={StaticResource MainPageViewModelDataContext}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBox x:Name="GridRowTextBox" Text="{Binding TextService.Text, Mode=TwoWay}" TextWrapping="Wrap" Margin="5"
+                 Grid.Row="0" Grid.Column="0" Padding="5"/>
+        <Button Margin="5" Padding="5" x:Name="AddGridRow" Command="{Binding AddCommand}"
+                CommandParameter="{Binding DataService.DataItems}"
+                Content="Add grid row" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Grid.Row="0" />
+        <Button Margin="5" Padding="5" Content="Load grid module to main region" Grid.Row="1" VerticalAlignment="Top"
+                Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding LoadCommand}"
+                CommandParameter="{Binding DataService.DataItems}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <i:InvokeCommandAction Command="{Binding UpdatePanel1Command}"
+                                           CommandParameter="{Binding ElementName=Panel1}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Panel1" />
+    </Grid>
+</UserControl>

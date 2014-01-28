@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="SilverlightApplicationHost.Views.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:viewModels="clr-namespace:SilverlightApplicationHost.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <viewModels:MainPageViewModel x:Key="MainPageViewModelDataContext" Panel1Source="SilverlightApplication1.xap"
+                                      Panel2Source="SilverlightApplication2.xap" />
+    </UserControl.Resources>
+    <d:DesignProperties.DataContext>
+        <viewModels:MainPageViewModel Panel1Source="SilverlightApplication1.xap"
+                                      Panel2Source="SilverlightApplication2.xap" />
+    </d:DesignProperties.DataContext>
+    <Grid x:Name="LayoutRoot" Background="White"
+          DataContext="{Binding Source={StaticResource MainPageViewModelDataContext}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <i:Interaction.Triggers>
+            <i:EventTrigger>
+                <i:InvokeCommandAction Command="{Binding LoadPanel1Command}"
+                                       CommandParameter="{Binding ElementName=Panel1, Mode=OneWay}" />
+                <i:InvokeCommandAction Command="{Binding LoadPanel2Command}"
+                                       CommandParameter="{Binding ElementName=Panel2, Mode=OneWay}" />
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Grid x:Name="Panel1" Grid.Column="0" />
+        <Grid x:Name="Panel2" Grid.Column="1" />
+    </Grid>
+</UserControl>

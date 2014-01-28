@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6db95beb-5ac4-4a1c-b964-c9978ef09e3b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:21983/SaveXmlService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SaveXmlService.xsd" MetadataType="Schema" ID="5ce7b2db-5940-4ee6-aa6e-bdcd660843c0" SourceId="1" SourceUrl="http://localhost:21983/SaveXmlService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SaveXmlService1.xsd" MetadataType="Schema" ID="f333f966-7504-4a21-823f-b8b0eec2e1d6" SourceId="1" SourceUrl="http://localhost:21983/SaveXmlService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SaveXmlService.wsdl" MetadataType="Wsdl" ID="0bccf05c-0051-4f09-ab97-947afceb5d3a" SourceId="1" SourceUrl="http://localhost:21983/SaveXmlService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SaveXmlService.disco" MetadataType="Disco" ID="46bac926-658b-4d34-a259-c247fa5e60eb" SourceId="1" SourceUrl="http://localhost:21983/SaveXmlService.svc?disco" />
+    <MetadataFile FileName="SaveXmlService1.wsdl" MetadataType="Wsdl" ID="8071105b-2771-4252-b763-6cc00d6b44f5" SourceId="1" SourceUrl="http://localhost:21983/SaveXmlService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_SaveXmlService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="../SaveXmlService.svc" binding="customBinding"
+                bindingConfiguration="CustomBinding_SaveXmlService" contract="SaveXmlServiceReference.SaveXmlService"
+                name="CustomBinding_SaveXmlService" />
+        </client>
+    </system.serviceModel>
+</configuration>

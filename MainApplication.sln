@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightApplication1", "SilverlightApplication1\SilverlightApplication1.csproj", "{DFCBF5C5-03A0-4297-9028-C9CA42FC6735}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2127EBFD-2204-4233-82FA-E170E0E0EC41} = {2127EBFD-2204-4233-82FA-E170E0E0EC41}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightApplication2", "SilverlightApplication2\SilverlightApplication2.csproj", "{C0368AAA-DC50-4FC9-A882-41D4C94C532A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2127EBFD-2204-4233-82FA-E170E0E0EC41} = {2127EBFD-2204-4233-82FA-E170E0E0EC41}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightApplicationHost", "SilverlightApplicationHost\SilverlightApplicationHost.csproj", "{AC15C698-C958-41AE-B53C-79EAFBF0B5BE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2127EBFD-2204-4233-82FA-E170E0E0EC41} = {2127EBFD-2204-4233-82FA-E170E0E0EC41}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightApplicationHost.Interfaces", "SilverlightApplicationHost.Interfaces\SilverlightApplicationHost.Interfaces.csproj", "{618A9B28-68F5-430F-A047-46D296A19426}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2127EBFD-2204-4233-82FA-E170E0E0EC41} = {2127EBFD-2204-4233-82FA-E170E0E0EC41}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightApplicationHost.Web", "SilverlightApplicationHost.Web\SilverlightApplicationHost.Web.csproj", "{2127EBFD-2204-4233-82FA-E170E0E0EC41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFCBF5C5-03A0-4297-9028-C9CA42FC6735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFCBF5C5-03A0-4297-9028-C9CA42FC6735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFCBF5C5-03A0-4297-9028-C9CA42FC6735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFCBF5C5-03A0-4297-9028-C9CA42FC6735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0368AAA-DC50-4FC9-A882-41D4C94C532A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0368AAA-DC50-4FC9-A882-41D4C94C532A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0368AAA-DC50-4FC9-A882-41D4C94C532A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0368AAA-DC50-4FC9-A882-41D4C94C532A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC15C698-C958-41AE-B53C-79EAFBF0B5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC15C698-C958-41AE-B53C-79EAFBF0B5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC15C698-C958-41AE-B53C-79EAFBF0B5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC15C698-C958-41AE-B53C-79EAFBF0B5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618A9B28-68F5-430F-A047-46D296A19426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618A9B28-68F5-430F-A047-46D296A19426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618A9B28-68F5-430F-A047-46D296A19426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618A9B28-68F5-430F-A047-46D296A19426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2127EBFD-2204-4233-82FA-E170E0E0EC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2127EBFD-2204-4233-82FA-E170E0E0EC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2127EBFD-2204-4233-82FA-E170E0E0EC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2127EBFD-2204-4233-82FA-E170E0E0EC41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
