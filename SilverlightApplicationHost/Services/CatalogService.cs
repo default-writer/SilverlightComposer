@@ -77,21 +77,6 @@ namespace SilverlightApplicationHost.Services
             }
         }
 
-        public void Update(Panel element, string uri, Action<Panel, string> action)
-        {
-            if (!string.IsNullOrEmpty(uri))
-            {
-                if (!_catalogs.ContainsKey(uri))
-                {
-                    return;
-                }
-                DeploymentCatalog catalog;
-                _catalogs.TryGetValue(uri, out catalog);
-                action(element, uri);
-                _catalogs[uri] = catalog;
-            }
-        }
-
         public static void Initialize()
         {
             _aggregateCatalog = new AggregateCatalog();
